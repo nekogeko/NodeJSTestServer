@@ -6,4 +6,6 @@ echo "Installing typings and webpack"
 $NODE/npm install webpack typings webpack-dev-server -g
 echo "Installing dependencies"
 $NODE/npm install
+echo "Killing existing Node process"
+kill -9 $(pidof node)
 echo "After installation completed."
