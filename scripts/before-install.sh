@@ -1,7 +1,4 @@
 #!/bin/bash
-export FOLDER=/tmp/Angular2CodeDeploy
-if [ -d $FOLDER ]
-then
- rm -rf $FOLDER
-fi
+FOLDER=/tmp/Angular2CodeDeploy
+echo "Creating application folder $FOLDER"
 mkdir -p $FOLDER
