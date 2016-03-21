@@ -1,27 +1,23 @@
 #!/bin/bash
-source scripts/config.sh
+source `dirname $0`/config.sh
 echo "NODE VERSION IS [$NODE_VERSION]"
-FOLDER=/tmp/Angular2CodeDeploy
-export FOLDER
-echo "Creating application folder [$FOLDER] for application [$APPLICATION_NAME]"
-mkdir -p $FOLDER
-cd $FOLDER
+echo "Creating application folder [$APP_FOLDER] for application [$APPLICATION_NAME]"
+mkdir -p $APP_FOLDER
+cd $APP_FOLDER
 echo "Installing NodeJS"
-cd /home/ec2-user
-rm -Rf ~/node-v5.9.0-linux-x64
-tar -xzf ~/node-v5.9.0-linux-x64.tar.gz
+cd $HOME_FOLDER
+rm -Rf $NODE_VERSION
+tar -xzf $NODE_VERSION.tar.gz
 echo "Setting up NODE environment variable"
-NODE=/home/ec2-user/node-v5.9.0-linux-x64/bin
-export NODE
-echo "Setting node folder to [$NODE]"
-PATH=$PATH:$NODE
-export PATH
-$NODE/node --version
+echo "Setting node folder to [$NODE_HOME]"
+PATH=$PATH:$NODE_HOME
+#export PATH
+$NODE_HOME/node --version
 echo "Installing npm forever plugin"
-$NODE/npm install forever -g
+$NODE_HOME/npm install forever -g
 echo "Installing typings and webpack"
-$NODE/npm install webpack typings webpack-dev-server -g
+$NODE_HOME/npm install webpack typings webpack-dev-server -g
 echo "Killing existing Node process"
-$NODE/forever stopall
+$NODE_HOME/forever stopall
 echo "After installation completed."
 

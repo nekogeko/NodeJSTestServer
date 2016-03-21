@@ -1,8 +1,9 @@
 #!/bin/bash
+source `dirname $0`/config.sh
+PATH=$PATH:$NODE_HOME
 echo "After install"
-#FOLDER=/tmp/Angular2CodeDeploy
-echo "Installing dependencies into [$FOLDER]"
-cd $FOLDER
-$NODE/npm install
+echo "Installing dependencies into [$APP_FOLDER]"
+cd $APP_FOLDER
+$NODE_HOME/npm install
 echo "After installation completed."
 
