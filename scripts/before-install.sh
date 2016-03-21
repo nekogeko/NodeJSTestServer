@@ -1,14 +1,15 @@
 #!/bin/bash
 export FOLDER=/tmp/Angular2CodeDeploy
-echo "Creating application folder $FOLDER"
+echo "Creating application folder [$FOLDER]"
 mkdir -p $FOLDER
 cd $FOLDER
 echo "Installing NodeJS"
 cd ~
 rm -Rf ~/node-v5.9.0-linux-x64
 tar -xzf ~/node-v5.9.0-linux-x64.tar.gz
+echo "Setting up NODE environment variable"
 export NODE=/home/ec2-user/node-v5.9.0-linux-x64/bin
-echo "Setting node folder to $NODE"
+echo "Setting node folder to [$NODE]"
 export PATH=$PATH:$NODE
 $NODE/node --version
 echo "Installing npm forever plugin"
