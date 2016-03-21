@@ -1,5 +1,6 @@
 #!/bin/bash
 source `dirname $0`/config.sh
+PATH=$PATH:$NODE_HOME
 cd $APP_FOLDER
 echo "Running application with node version"
 $NODE_HOME/node --version
