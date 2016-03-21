@@ -1,6 +1,5 @@
 #!/bin/bash
-export FOLDER=/tmp/Angular2CodeDeploy
-NODE="/home/ec2-user/node-v5.9.0-linux-x64/bin"
+FOLDER=/tmp/Angular2CodeDeploy
 cd $FOLDER
 echo "Running application"
-forever start -al ./forever.log -ao out.log -ae err.log ./server.js
+$NODE/forever start -al ./forever.log -ao out.log -ae err.log ./server.js
