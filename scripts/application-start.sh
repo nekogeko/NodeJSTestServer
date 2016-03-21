@@ -3,4 +3,4 @@ export FOLDER=/tmp/Angular2CodeDeploy
 NODE="/home/ec2-user/node-v5.9.0-linux-x64/bin"
 cd $FOLDER
 echo "Running application"
-sudo nohup $NODE/node server.js &
+forever start -al ./forever.log -ao out.log -ae err.log ./server.js
