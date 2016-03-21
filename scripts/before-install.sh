@@ -1,5 +1,5 @@
 #!/bin/bash
-source config.sh
+source scripts/config.sh
 echo "NODE VERSION IS [$NODE_VERSION]"
 FOLDER=/tmp/Angular2CodeDeploy
 export FOLDER
