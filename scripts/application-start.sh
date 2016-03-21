@@ -4,4 +4,4 @@ PATH=$PATH:$NODE_HOME
 cd $APP_FOLDER
 echo "Running application with node version"
 $NODE_HOME/node --version
-$NODE_HOME/forever start -al `dirname $0`/forever.log -ao `dirname $0`/out.log -ae `dirname $0`/err.log `dirname $0`/server.js
+$NODE_HOME/forever start -al $APP_FOLDER/forever.log -ao $APP_FOLDER/out.log -ae $APP_FOLDER/err.log $APP_FOLDER/server.js
