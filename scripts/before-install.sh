@@ -2,6 +2,7 @@
 source `dirname $0`/config.sh
 echo "NODE VERSION IS [$NODE_VERSION]"
 echo "Creating application folder [$APP_FOLDER] for application [$APPLICATION_NAME]"
+sudo rm -Rf $APP_FOLDER
 mkdir -p $APP_FOLDER
 cd $HOME_FOLDER
 echo "Installing NodeJS"
