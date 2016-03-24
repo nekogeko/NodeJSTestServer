@@ -6,7 +6,7 @@ my_http.createServer(function(request,response){
     response.write("<!DOCTYPE 'html'>");
     response.write("<html>");
     response.write("<head>");
-    response.write("<title>Hello NodeJS World - Version 2.1.1</title>");
+    response.write("<title>Hello NodeJS World - Version 2.1.2</title>");
     response.write("</head>");
     response.write("<body>");
     response.write("<h1>Showcasing what you can do with AWS:</h1>");
